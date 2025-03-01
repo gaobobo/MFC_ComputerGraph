@@ -68,7 +68,7 @@ void CMFC1View::OnDraw(CDC* pDC)
 	CBrush blue_cross_brush(HS_DIAGCROSS, RGB(0, 0, 255));
 	
 
-	// line
+	// 线条
 	pDC->SelectObject(&blue_3_solid_pen);
 	pDC->MoveTo(10, 10);
 	pDC->LineTo(100, 100);
