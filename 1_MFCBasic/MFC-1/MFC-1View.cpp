@@ -81,7 +81,7 @@ void CMFC1View::OnDraw(CDC* pDC)
 
 	red_1_dot_pen.DeleteObject();
 
-	// circle
+	// 圆
 	pDC->SelectObject(&green_2_solid_pen);
 	pDC->SelectObject(&blue_cross_brush);
 	pDC->Ellipse(240, 10, 340, 110);
