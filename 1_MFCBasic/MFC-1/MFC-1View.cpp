@@ -58,8 +58,6 @@ void CMFC1View::OnDraw(CDC* pDC)
 	if (!pDoc)
 		return;
 
-	// TODO: 在此处为本机数据添加绘制代码
-
 	CPen blue_3_solid_pen(PS_SOLID, 3, RGB(0, 0, 255));
 
 	CPen red_1_dot_pen(PS_DOT, 1, RGB(255, 0, 0));
