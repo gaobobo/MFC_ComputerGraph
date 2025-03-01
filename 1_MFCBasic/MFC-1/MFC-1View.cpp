@@ -66,20 +66,20 @@ void CMFC1View::OnDraw(CDC* pDC)
 	CBrush blue_cross_brush(HS_DIAGCROSS, RGB(0, 0, 255));
 	
 
-	// line
+	// 线条
 	pDC->SelectObject(&blue_3_solid_pen);
 	pDC->MoveTo(10, 10);
 	pDC->LineTo(100, 100);
 
 	blue_3_solid_pen.DeleteObject();
 
-	//squar
+	//矩形
 	pDC->SelectObject(&red_1_dot_pen);
 	pDC->Rectangle(120, 10, 230, 110);
 
 	red_1_dot_pen.DeleteObject();
 
-	// circle
+	// 圆
 	pDC->SelectObject(&green_2_solid_pen);
 	pDC->SelectObject(&blue_cross_brush);
 	pDC->Ellipse(240, 10, 340, 110);
