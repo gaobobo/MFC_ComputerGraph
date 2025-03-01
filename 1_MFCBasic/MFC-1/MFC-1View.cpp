@@ -75,7 +75,7 @@ void CMFC1View::OnDraw(CDC* pDC)
 
 	blue_3_solid_pen.DeleteObject();
 
-	//squar
+	//矩形
 	pDC->SelectObject(&red_1_dot_pen);
 	pDC->Rectangle(120, 10, 230, 110);
 
