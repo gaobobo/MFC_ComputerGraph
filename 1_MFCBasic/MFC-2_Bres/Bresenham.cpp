@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "Bresenham.h"
 
-Bresenham::Bresenham(CDC* pDC, int step): pDC(pDC), step(step)
+Bresenham::Bresenham(CDC* pDC): pDC(pDC)
 {
 
 }
@@ -31,7 +31,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		{
 			e += fabs(K);
 			start.Offset(1, e >= 0
-				? pow(1, e -= 1) * -(K < 0)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
+				? pow(1, e -= 1) * (K < 0 ? -1 : 1)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
 				: 0);
 			this->pDC->SetPixel(start, color);
 		}
@@ -52,7 +52,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		{
 			e += isnan(K) ? 0 : fabs(K);
 			start.Offset(e >= 0
-				? pow(1, e -= 1) * -(K < 0)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
+				? pow(1, e -= 1) * (K < 0 ? -1 : 1)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
 				: 0,
 				1);
 			this->pDC->SetPixel(start, color);
