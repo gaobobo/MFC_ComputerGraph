@@ -25,10 +25,7 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 			start.x = start.x ^ end.x;
 		}
 		auto next_point = [this](CPoint* p, double k)
-		{
-			p->Offset(this->step, round(k));
-			return *p;
-		};
+			{ p->Offset(this->step, round(k)); return *p; };
 		while (start.x - end.x <= 0) this->pDC->SetPixel(next_point(&start, K), color);		
 	} else
 	{
@@ -40,10 +37,7 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 			start.y = start.y ^ end.y;
 		}
 		auto next_point = [this](CPoint* p, double k)
-		{
-			p->Offset(round(k), this->step);
-			return *p;
-		};
+			{ p->Offset(round(k), this->step); return *p;};
 		while (start.y - end.y <= 0) this->pDC->SetPixel(next_point(&start, isnan(K) ? 0 : K), color);
 	}
 }
