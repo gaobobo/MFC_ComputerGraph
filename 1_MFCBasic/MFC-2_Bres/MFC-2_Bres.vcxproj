@@ -183,6 +183,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bresenham.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MFC-2_Res.h" />
@@ -193,6 +194,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bresenham.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MFC-2_Res.cpp" />
     <ClCompile Include="MFC-2_ResDoc.cpp" />

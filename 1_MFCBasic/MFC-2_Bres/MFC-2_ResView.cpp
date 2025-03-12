@@ -13,6 +13,8 @@
 #include "MFC-2_ResDoc.h"
 #include "MFC-2_ResView.h"
 
+#include "Bresenham.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -51,7 +53,7 @@ BOOL CMFC2ResView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFC2ResView 绘图
 
-void CMFC2ResView::OnDraw(CDC* /*pDC*/)
+void CMFC2ResView::OnDraw(CDC* pDC)
 {
 	CMFC2ResDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -59,6 +61,13 @@ void CMFC2ResView::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	
+	Bresenham(pDC).DrawLine(CPoint(100, 300), CPoint(100, 600));
+	Bresenham(pDC).DrawLine(CPoint(100, 400), CPoint(100, 100));
+	Bresenham(pDC).DrawLine(CPoint(300, 100), CPoint(500, 100));
+	Bresenham(pDC).DrawLine(CPoint(400, 100), CPoint(100, 100));
+	Bresenham(pDC).DrawLine(CPoint(200, 200), CPoint(400, 100));
+	Bresenham(pDC).DrawLine(CPoint(200, 300), CPoint(100, 200));
 }
 
 
