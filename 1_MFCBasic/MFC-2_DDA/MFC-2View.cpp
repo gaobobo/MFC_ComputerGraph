@@ -62,12 +62,12 @@ void CMFC2View::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 
-	DDA_Line(pDC).DrawLine(CPoint(100, 300), CPoint(100, 600));
-	DDA_Line(pDC).DrawLine(CPoint(100, 400), CPoint(100, 100));
-	DDA_Line(pDC).DrawLine(CPoint(300, 100), CPoint(500, 100));
-	DDA_Line(pDC).DrawLine(CPoint(400, 100), CPoint(100, 100));
-	DDA_Line(pDC).DrawLine(CPoint(200, 200), CPoint(400, 100));
-	DDA_Line(pDC).DrawLine(CPoint(200, 300), CPoint(100, 200));
+	DDA_Line(pDC, 2).DrawLine(CPoint(100, 300), CPoint(100, 600));
+	DDA_Line(pDC, 2).DrawLine(CPoint(100, 400), CPoint(100, 100));
+	DDA_Line(pDC, 2).DrawLine(CPoint(300, 100), CPoint(500, 100));
+	DDA_Line(pDC, 2).DrawLine(CPoint(400, 100), CPoint(100, 100));
+	DDA_Line(pDC, 2).DrawLine(CPoint(200, 200), CPoint(400, 100));
+	DDA_Line(pDC, 2).DrawLine(CPoint(200, 300), CPoint(100, 200));
 	
 	
 
