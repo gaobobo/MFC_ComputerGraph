@@ -1,5 +1,5 @@
 ﻿
-// MFC-2.cpp: 定义应用程序的类行为。
+// MFC-2_DDA.cpp: 定义应用程序的类行为。
 //
 
 #include "pch.h"

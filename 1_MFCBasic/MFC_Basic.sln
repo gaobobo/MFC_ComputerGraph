@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-1", "MFC-1\MFC-1.vcxproj", "{F42BDC6C-9941-4086-B25F-3416A1A2DDD5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-2", "MFC-2\MFC-2.vcxproj", "{C7F4D9F1-8187-4D65-9FE8-57789D463A2C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-2_DDA", "MFC-2_DDA\MFC-2_DDA.vcxproj", "{C7F4D9F1-8187-4D65-9FE8-57789D463A2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,5 @@
 ﻿
-// MFC-2.h: MFC-2 应用程序的主头文件
+// MFC-2_DDA.h: MFC-2_DDA 应用程序的主头文件
 //
 #pragma once
 
@@ -11,7 +11,7 @@
 
 
 // CMFC2App:
-// 有关此类的实现，请参阅 MFC-2.cpp
+// 有关此类的实现，请参阅 MFC-2_DDA.cpp
 //
 
 class CMFC2App : public CWinApp
