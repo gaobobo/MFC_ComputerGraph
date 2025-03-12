@@ -62,12 +62,12 @@ void CMFC2ResView::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 	
-	Bresenham(pDC).DrawLine(CPoint(100, 300), CPoint(100, 600));
-	Bresenham(pDC).DrawLine(CPoint(100, 400), CPoint(100, 100));
-	Bresenham(pDC).DrawLine(CPoint(300, 100), CPoint(500, 100));
-	Bresenham(pDC).DrawLine(CPoint(400, 100), CPoint(100, 100));
-	Bresenham(pDC).DrawLine(CPoint(200, 200), CPoint(400, 100));
-	Bresenham(pDC).DrawLine(CPoint(200, 300), CPoint(100, 200));
+	Bresenham(pDC, 2).DrawLine(CPoint(100, 300), CPoint(100, 600));
+	Bresenham(pDC, 2).DrawLine(CPoint(100, 400), CPoint(100, 100));
+	Bresenham(pDC, 2).DrawLine(CPoint(300, 100), CPoint(500, 100));
+	Bresenham(pDC, 2).DrawLine(CPoint(400, 100), CPoint(100, 100));
+	Bresenham(pDC, 2).DrawLine(CPoint(200, 200), CPoint(400, 100));
+	Bresenham(pDC, 2).DrawLine(CPoint(200, 300), CPoint(100, 200));
 }
 
 
