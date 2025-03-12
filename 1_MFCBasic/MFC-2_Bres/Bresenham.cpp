@@ -21,7 +21,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		{
 			// 交换两数
 			start.x = start.x ^ end.x;
-			end.x = start.x ^ end.x ^ end.x;
+			end.x = start.x ^ end.x;
 			start.x = start.x ^ end.x;
 		}
 

@@ -21,7 +21,7 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 		{
 			// 交换两数
 			start.x = start.x ^ end.x;
-			end.x = start.x ^ end.x ^ end.x;
+			end.x = start.x ^ end.x;
 			start.x = start.x ^ end.x;
 		}
 		auto next_point = [](CPoint* p, int k) {p->Offset(1, k); return *p;};
