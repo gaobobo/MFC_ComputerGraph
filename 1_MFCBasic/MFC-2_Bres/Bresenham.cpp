@@ -1,9 +1,9 @@
 ﻿#include "pch.h"
 #include "Bresenham.h"
 
-Bresenham::Bresenham(CDC* pDC)
+Bresenham::Bresenham(CDC* pDC, int step): pDC(pDC), step(step)
 {
-    this->pDC = pDC;
+
 }
 
 Bresenham::~Bresenham()
