@@ -13,9 +13,9 @@ Bresenham::~Bresenham()
 
 void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
-    const double K = end.x - start.x ? fabs((end.y - start.y) / (end.x - start.x)) : -1;
+	const double K = end.x - start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : NAN;
 
-	if (0 <= K && K <= 1)
+	if (!isnan(K) && fabs(K) <= 1)
 	{
 		if (start.x > end.x)
 		{
@@ -27,7 +27,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 
 		double e = -0.5;
 
-		while (start.x - end.x)
+		while (start.x - end.x <= 0)
 		{
 			e += K;
 			start.Offset(1, e >= 0
@@ -48,9 +48,9 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		
 		double e = -0.5;
 
-		while (start.x - end.x)
+		while (start.y - end.y <= 0)
 		{
-			e += K < 0 ? 0 : K;
+			e += isnan(K) ? 0 : K;
 			start.Offset(e >= 0
 				? pow(1, e -= 1)	// 当 e>= 0 时，x+1，误差 e-1
 				: 0,
