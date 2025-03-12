@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "Bresenham.h"
 
-Bresenham::Bresenham(CDC* pDC, int step): pDC(pDC), step(step)
+Bresenham::Bresenham(CDC* pDC): pDC(pDC)
 {
 
 }
