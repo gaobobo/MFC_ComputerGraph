@@ -19,6 +19,7 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 	{
 		if (start.x > end.x)
 		{
+			// 交换两数
 			start.x = start.x ^ end.x;
 			end.x = start.x ^ end.x ^ end.x;
 			start.x = start.x ^ end.x;
@@ -29,11 +30,12 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 	{
 		if (start.y > end.y)
 		{
+			// 交换两数
 			start.y = start.y ^ end.y;
 			end.y = start.y ^ end.y;
 			start.y = start.y ^ end.y;
 		}
-		auto next_point = [](CPoint* p, int k) {p->Offset(k < 0 ? 0 : k, 1); return *p;};
-		while (start.y - end.y) this->pDC->SetPixel(next_point(&start, K), color);
+		auto next_point = [](CPoint* p, int k) {p->Offset(k, 1); return *p;};
+		while (start.y - end.y) this->pDC->SetPixel(next_point(&start, K < 0 ? 0 : K), color);
 	}
 }
