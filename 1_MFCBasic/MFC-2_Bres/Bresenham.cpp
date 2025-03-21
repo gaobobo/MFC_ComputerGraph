@@ -30,9 +30,10 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		while (start.x - end.x <= 0)
 		{
 			e += fabs(K);
-			start.Offset(1, e >= 0
-				? pow(1, e -= 1) * (K < 0 ? -1 : 1)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
-				: 0);
+			start.Offset(1,
+					 e >= 0
+							? [&e, K]() {e--; return K < 0 ? -1 : 1;}()	// 当 e>=0 时， e-1 。如有 K<0，则偏移-1，否则反之。
+							: 0);
 			this->pDC->SetPixel(start, color);
 		}
 		
@@ -52,8 +53,8 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 		{
 			e += isnan(K) ? 0 : fabs(K);
 			start.Offset(e >= 0
-				? pow(1, e -= 1) * (K < 0 ? -1 : 1)	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
-				: 0,
+							? [&e, K]() {e--; return K < 0 ? -1 : 1;}()	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
+							: 0,
 				1);
 			this->pDC->SetPixel(start, color);
 		}
