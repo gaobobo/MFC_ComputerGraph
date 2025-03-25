@@ -28,17 +28,20 @@ void Wu::Draw(COLORREF color)
         
         while (y <= end.y)
         {
-            pDC->SetPixelV(x, y,RGB(e*255,e*255,e*255));
-            pDC->SetPixelV(x,y+1,RGB((1-e)*255,(1-e)*255,(1-e)*255));
-            
             y++;
             
             if (e >= 1)
             {
+                pDC->SetPixelV(x + 2, y, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
+                pDC->SetPixelV(x + 1, y, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
+                
                 x += K < 0 ? -1 : 1;
                 e += fabs(K) - 1;
             } else
             {
+                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
+                pDC->SetPixelV(x + 1, y, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
+                
                 e += fabs(K);
             }
         }
@@ -59,17 +62,20 @@ void Wu::Draw(COLORREF color)
 
         while (x <= end.x)
         {
-            pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
-            pDC->SetPixelV(x, y + 1, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
-        
             x++;
     
             if (e >= 1)
             {
+                pDC->SetPixelV(x, y + 2, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
+                pDC->SetPixelV(x, y + 1, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
+                
                 y += K < 0 ? -1 : 1;
                 e += fabs(K) - 1;
             } else
             {
+                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
+                pDC->SetPixelV(x, y + 1, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
+                
                 e += fabs(K);
             }
         }   
