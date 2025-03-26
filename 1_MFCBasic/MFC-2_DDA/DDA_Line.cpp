@@ -15,11 +15,6 @@ DDA_Line::DDA_Line(CDC* pDC, int step): step(step), pDC(pDC)
 
 }
 
-DDA_Line::~DDA_Line()
-{
-	
-}
-
 void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
 	const int dx = end.x - start.x;
