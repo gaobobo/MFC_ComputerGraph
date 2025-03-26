@@ -29,20 +29,22 @@ void Wu::Draw(COLORREF color)
         while (y <= end.y)
         {
             y++;
+            const int x_offset = K < 0 ? -1 : 1;
             
             if (e >= 1)
             {
-                pDC->SetPixelV(x + 2, y, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
-                pDC->SetPixelV(x + 1, y, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
                 
-                x += K < 0 ? -1 : 1;
+                x += x_offset;
                 e += fabs(K) - 1;
+
+                pDC->SetPixelV(x , y, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
+                pDC->SetPixelV(x + x_offset, y, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
             } else
             {
-                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
-                pDC->SetPixelV(x + 1, y, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
-                
                 e += fabs(K);
+
+                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
+                pDC->SetPixelV(x + x_offset, y, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
             }
         }
     } else
@@ -63,20 +65,22 @@ void Wu::Draw(COLORREF color)
         while (x <= end.x)
         {
             x++;
+            const int y_offset = K < 0 ? -1 : 1;
     
             if (e >= 1)
             {
-                pDC->SetPixelV(x, y + 2, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
-                pDC->SetPixelV(x, y + 1, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
                 
-                y += K < 0 ? -1 : 1;
+                y += y_offset;
                 e += fabs(K) - 1;
+
+                pDC->SetPixelV(x, y, RGB((2 - e) * 255, (2 - e) * 255, (2 - e) * 255));
+                pDC->SetPixelV(x, y + y_offset, RGB((e - 1) * 255,(e - 1) * 255,(e - 1) * 255));
             } else
             {
-                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
-                pDC->SetPixelV(x, y + 1, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
-                
                 e += fabs(K);
+
+                pDC->SetPixelV(x, y, RGB(e * 255,e * 255,e * 255));
+                pDC->SetPixelV(x, y + y_offset, RGB((1 - e) * 255, (1 - e) * 255, (1 - e) * 255));
             }
         }   
     }
