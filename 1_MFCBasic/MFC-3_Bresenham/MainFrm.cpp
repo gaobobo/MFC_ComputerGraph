@@ -2,7 +2,7 @@
 // MainFrm.cpp: CMainFrame 类的实现
 //
 
-#include "pch.h"
+#include "StdAfx.h"
 #include "framework.h"
 #include "MFC-3_Bresenham.h"
 
