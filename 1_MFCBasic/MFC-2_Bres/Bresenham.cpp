@@ -68,7 +68,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 
 		while (x <= end.x)
 		{
-			if (e >= 1)
+			if (e >= 0)
 			{
 				y += K < 0 ? -1 : 1;
 				e += fabs(K) - 1;
