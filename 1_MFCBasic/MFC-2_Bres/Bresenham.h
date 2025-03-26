@@ -1,9 +1,9 @@
 ﻿#pragma once
 
-class Bresenham_Circle
+class Bresenham
 {
 public:
-    Bresenham_Circle(CDC* pDC);
+    Bresenham(CDC* pDC);
 
     void DrawLine(CPoint start, CPoint end, COLORREF color = RGB(0, 0, 0));
 
