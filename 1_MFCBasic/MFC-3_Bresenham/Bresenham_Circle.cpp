@@ -6,13 +6,13 @@
  */
 // #include "pch.h"
 #include "stdafx.h"
-#include "Bresenham.h"
+#include "Bresenham_Circle.h"
 
-Bresenham::Bresenham(CPoint center, int r, CDC* pDC) : x(0), y(r), r(r), center(center), d(1.25 - r), pDC(pDC)
+Bresenham_Circle::Bresenham_Circle(CPoint center, int r, CDC* pDC) : x(0), y(r), r(r), center(center), d(1.25 - r), pDC(pDC)
 {
 }
 
-void Bresenham::Draw(COLORREF color)
+void Bresenham_Circle::Draw(COLORREF color)
 {
     int offset_x = center.x - r;
     int offset_y = center.y + r;

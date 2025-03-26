@@ -179,7 +179,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bresenham.h" />
+    <ClInclude Include="Bresenham_Circle.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MFC-3_Bresenham.h" />
@@ -190,7 +190,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bresenham.cpp" />
+    <ClCompile Include="Bresenham_Circle.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MFC-3_Bresenham.cpp" />
     <ClCompile Include="MFC-3_BresenhamDoc.cpp" />
