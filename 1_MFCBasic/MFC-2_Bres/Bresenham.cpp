@@ -6,16 +6,16 @@
  */
 // #include "pch.h"
 #include "stdafx.h"
-#include "Bresenham_Circle.h"
+#include "Bresenham.h"
 
 #include <cmath>
 
-Bresenham_Circle::Bresenham_Circle(CDC* pDC): pDC(pDC)
+Bresenham::Bresenham(CDC* pDC): pDC(pDC)
 {
 
 }
 
-void Bresenham_Circle::DrawLine(CPoint start, CPoint end, COLORREF color)
+void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
 
 	const int dx = end.x - start.x;
