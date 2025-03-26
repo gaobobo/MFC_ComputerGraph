@@ -48,7 +48,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 			}
 			
 			y++;
-			pDC->SetPixel(x, y, color);
+			this->pDC->SetPixel(x, y, color);
 			
 		}
 	} else
@@ -78,7 +78,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 			}
 
 			x++;
-			pDC->SetPixel(x, y, color);
+			this->pDC->SetPixel(x, y, color);
 		}   
 	}
 }
