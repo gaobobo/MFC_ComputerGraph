@@ -2,7 +2,7 @@
 // MFC-3_Bresenham.cpp: 定义应用程序的类行为。
 //
 
-#include "pch.h"
+#include "stdafx.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"

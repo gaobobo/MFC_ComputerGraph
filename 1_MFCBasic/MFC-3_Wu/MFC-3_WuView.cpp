@@ -1,8 +1,16 @@
 ﻿
 // MFC-3_WuView.cpp: CMFC3WuView 类的实现
 //
+/*
+* 对于最新版本(2018及以上)，使用 #include "pch.h" 而非 #include "stdafx.h"
+ * 或通过“解决方案管理器 -> 右键项目 -> 属性-> C/C++ -> 预编译头”中查看预编译头
+ * 名称。如果你是从Gitee/Github下载的该项目，那么该名称已经修改为 stdafx.h 。
+ * 预编译头可以加快编译速度，原因是不常更新的只编译一次，因此没有考虑移除预编译头。
+ */
+// #include "pch.h"
+#include "stdafx.h"
+#include "Wu.h"
 
-#include "pch.h"
 #include "framework.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
@@ -12,8 +20,6 @@
 
 #include "MFC-3_WuDoc.h"
 #include "MFC-3_WuView.h"
-
-#include "Wu.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -62,12 +68,14 @@ void CMFC3WuView::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 
-	Wu(CPoint(100, 300), CPoint(100, 600), pDC).Draw();
-	Wu(CPoint(100, 400), CPoint(100, 100), pDC).Draw();
-	Wu(CPoint(300, 100), CPoint(500, 100), pDC).Draw();
-	Wu(CPoint(400, 100), CPoint(100, 100), pDC).Draw();
-	Wu(CPoint(200, 200), CPoint(400, 100), pDC).Draw();
-	Wu(CPoint(200, 300), CPoint(100, 200), pDC).Draw();
+	Wu(CPoint(100, 100), CPoint(500, 300), pDC).Draw();
+
+	// Wu(CPoint(100, 300), CPoint(100, 600), pDC).Draw();
+	// Wu(CPoint(100, 400), CPoint(100, 100), pDC).Draw();
+	// Wu(CPoint(300, 100), CPoint(500, 100), pDC).Draw();
+	// Wu(CPoint(400, 100), CPoint(100, 100), pDC).Draw();
+	// Wu(CPoint(200, 200), CPoint(400, 100), pDC).Draw();
+	// Wu(CPoint(200, 300), CPoint(100, 200), pDC).Draw();
 	
 }
 
