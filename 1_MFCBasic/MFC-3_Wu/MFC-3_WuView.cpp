@@ -68,12 +68,14 @@ void CMFC3WuView::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 
-	Wu(CPoint(100, 300), CPoint(100, 600), pDC).Draw();
-	Wu(CPoint(100, 400), CPoint(100, 100), pDC).Draw();
-	Wu(CPoint(300, 100), CPoint(500, 100), pDC).Draw();
-	Wu(CPoint(400, 100), CPoint(100, 100), pDC).Draw();
-	Wu(CPoint(200, 200), CPoint(400, 100), pDC).Draw();
-	Wu(CPoint(200, 300), CPoint(100, 200), pDC).Draw();
+	Wu(CPoint(100, 100), CPoint(500, 300), pDC).Draw();
+
+	// Wu(CPoint(100, 300), CPoint(100, 600), pDC).Draw();
+	// Wu(CPoint(100, 400), CPoint(100, 100), pDC).Draw();
+	// Wu(CPoint(300, 100), CPoint(500, 100), pDC).Draw();
+	// Wu(CPoint(400, 100), CPoint(100, 100), pDC).Draw();
+	// Wu(CPoint(200, 200), CPoint(400, 100), pDC).Draw();
+	// Wu(CPoint(200, 300), CPoint(100, 200), pDC).Draw();
 	
 }
 
