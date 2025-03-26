@@ -1,8 +1,16 @@
 ﻿
 // MFC-2View.cpp: CMFC2View 类的实现
 //
+/*
+* 对于最新版本(2018及以上)，使用 #include "pch.h" 而非 #include "StdAfx.h"
+ * 或通过“解决方案管理器 -> 右键项目 -> 属性-> C/C++ -> 预编译头”中查看预编译头
+ * 名称。如果你是从Gitee/Github下载的该项目，那么该名称已经修改为 StdAfx.h 。
+ * 预编译头可以加快编译速度，原因是不常更新的只编译一次，因此没有考虑移除预编译头。
+ */
+// #include "pch.h"
+#include "StdAfx.h"
+#include "DDA_Line.h"
 
-#include "pch.h"
 #include "framework.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
@@ -16,8 +24,6 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
-#include "DDA_Line.h"
 
 
 // CMFC2View
