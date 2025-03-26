@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "Bresenham.h"
 
-Bresenham::Bresenham(CPoint center, int r, CDC* pDC) : x(0) ,y(r), d(1.25 - r), center(center), pDC(pDC)
+Bresenham::Bresenham(CPoint center, int r, CDC* pDC) : y(r), d(1.25 - r), center(center), pDC(pDC)
 {
 }
 
