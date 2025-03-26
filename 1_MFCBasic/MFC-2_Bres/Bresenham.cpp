@@ -22,31 +22,11 @@ Bresenham::~Bresenham()
 
 void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
-	const double K = end.x - start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : NAN;
 
-	if (!isnan(K) && fabs(K) <= 1)
-	{
-		if (start.x > end.x)
-		{
-			// 交换两数
-			start.x = start.x ^ end.x;
-			end.x = start.x ^ end.x;
-			start.x = start.x ^ end.x;
-		}
+	const int dx = end.x - start.x;
+	const int dy = end.y - start.y;
 
-		double e = -0.5;
-
-		while (start.x - end.x <= 0)
-		{
-			e += fabs(K);
-			start.Offset(1,
-					 e >= 0
-							? [&e, K]()->int {e--; return K < 0 ? -1 : 1;}()	// 当 e>=0 时， e-1 。如有 K<0，则偏移-1，否则反之。
-							: 0);
-			this->pDC->SetPixel(start, color);
-		}
-		
-	} else
+	if (dx == 0 || abs(dy / dx) > 1)
 	{
 		if (start.y > end.y)
 		{
@@ -55,18 +35,55 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 			end.y = start.y ^ end.y;
 			start.y = start.y ^ end.y;
 		}
-		
+        
+		int x = start.x;
+		int y = start.y;
+		double K = end.x - start.x ? 1.0 * dy / dx : 0;
+		double e = -0.5;
+        
+		while (y <= end.y)
+		{
+			if (e >= 0)
+			{
+				x += K < 0 ? -1 : 1;
+				e += fabs(K) - 1;
+			} else
+			{
+				e += fabs(K);
+			}
+			
+			y++;
+			pDC->SetPixel(x, y, color);
+			
+		}
+	} else
+	{
+		if (start.x > end.x)
+		{
+			// 交换两数
+			start.x = start.x ^ end.x;
+			end.x = start.x ^ end.x;
+			start.x = start.x ^ end.x;
+		}
+        
+		int x = start.x;
+		int y = start.y;
+		const double K =  1.0 * dy / dx;
 		double e = -0.5;
 
-		while (start.y - end.y <= 0)
+		while (x <= end.x)
 		{
-			e += isnan(K) ? 0 : fabs(K);
-			start.Offset(e >= 0
-							? [&e, K]()->int {e--; return K < 0 ? -1 : 1;}()	// 当 e<=0 时，如有 K<0，则偏移-1且 e-1，否则反之。
-							: 0,
-				1);
-			this->pDC->SetPixel(start, color);
-		}
-	}
+			if (e >= 1)
+			{
+				y += K < 0 ? -1 : 1;
+				e += fabs(K) - 1;
+			} else
+			{
+				e += fabs(K);
+			}
 
+			x++;
+			pDC->SetPixel(x, y, color);
+		}   
+	}
 }
