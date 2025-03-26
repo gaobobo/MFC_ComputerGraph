@@ -8,6 +8,8 @@
 #include "StdAfx.h"
 #include "DDA_Line.h"
 
+#include <cmath>
+
 DDA_Line::DDA_Line(CDC* pDC, int step): step(step), pDC(pDC)
 {
 
@@ -20,21 +22,10 @@ DDA_Line::~DDA_Line()
 
 void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
-	const double K = end.x - start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : NAN;
+	const int dx = end.x - start.x;
+	const int dy = end.y - start.y;
 
-	if (!isnan(K) && fabs(K) <= 1)
-	{
-		if (start.x > end.x)
-		{
-			// 交换两数
-			start.x = start.x ^ end.x;
-			end.x = start.x ^ end.x;
-			start.x = start.x ^ end.x;
-		}
-		auto next_point = [this](CPoint* p, double k)
-			{ p->Offset(this->step, round(k)); return *p; };
-		while (start.x - end.x <= 0) this->pDC->SetPixel(next_point(&start, K), color);		
-	} else
+	if (dx == 0 || abs(dy / dx) > 1)
 	{
 		if (start.y > end.y)
 		{
@@ -43,8 +34,36 @@ void DDA_Line::DrawLine(CPoint start, CPoint end, COLORREF color)
 			end.y = start.y ^ end.y;
 			start.y = start.y ^ end.y;
 		}
-		auto next_point = [this](CPoint* p, double k)
-			{ p->Offset(round(k) * this->step, 1); return *p;};
-		while (start.y - end.y <= 0) this->pDC->SetPixel(next_point(&start, isnan(K) ? 0 : K), color);
+        
+		int x = start.x;
+		int y = start.y;
+		const double K = dx ? 1.0 * dy / dx : 0;
+		const int x_offset = (K > 0) - (K < 0);	// K > 0, 1; K == 0, 0; K < 0, -1;
+        
+		while (y <= end.y)
+		{
+			this->pDC->SetPixel(x += x_offset * this->step, y++, color);
+		}
+
+	} else
+	{
+		if (start.x > end.x)
+		{
+			// 交换两数
+			start.x = start.x ^ end.x;
+			end.x = start.x ^ end.x;
+			start.x = start.x ^ end.x;
+		}
+        
+		int x = start.x;
+		int y = start.y;
+		const double K = 1.0 * dy / dx;
+		const int y_offset = (K > 0) - (K < 0);	// K > 0, 1; K == 0, 0; K < 0, -1;
+		
+
+		while (x <= end.x)
+		{
+			this->pDC->SetPixel(x += this->step, y += y_offset, color);
+		}
 	}
 }
