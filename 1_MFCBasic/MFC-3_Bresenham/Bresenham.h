@@ -8,10 +8,10 @@ public:
     void Draw(COLORREF color = RGB(0, 0, 0));
 
 private:
-    int x = 0;
-    int y = 0;
-    int r = 0;
-    CPoint center = CPoint(0, 0);
-    double d = 1.25;
+    int x;
+    int y;
+    int r;
+    CPoint center;
+    double d;
     CDC* pDC;
 };
