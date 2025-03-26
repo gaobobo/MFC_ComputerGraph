@@ -2,7 +2,7 @@
 // MFC-2_Bres.cpp: 定义应用程序的类行为。
 //
 
-#include "pch.h"
+#include "StdAfx.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
