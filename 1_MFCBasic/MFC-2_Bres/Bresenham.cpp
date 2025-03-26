@@ -33,7 +33,7 @@ void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
         
 		int x = start.x;
 		int y = start.y;
-		double K = end.x - start.x ? 1.0 * dy / dx : 0;
+		double K = dx ? 1.0 * dy / dx : 0;
 		double e = -0.5;
         
 		while (y <= end.y)
