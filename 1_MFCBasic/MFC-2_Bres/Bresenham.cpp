@@ -15,11 +15,6 @@ Bresenham::Bresenham(CDC* pDC): pDC(pDC)
 
 }
 
-Bresenham::~Bresenham()
-{
-    
-}
-
 void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
 {
 
