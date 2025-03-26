@@ -8,6 +8,8 @@
 #include "StdAfx.h"
 #include "Wu.h"
 
+#include <cmath>
+
 Wu::Wu(CPoint start, CPoint end, CDC* pDC): start(start), end(end), pDC(pDC)
 {
     
