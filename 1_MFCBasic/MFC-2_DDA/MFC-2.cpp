@@ -2,7 +2,7 @@
 // MFC-2_DDA.cpp: 定义应用程序的类行为。
 //
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"

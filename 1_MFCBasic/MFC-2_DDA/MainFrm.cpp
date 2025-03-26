@@ -2,7 +2,7 @@
 // MainFrm.cpp: CMainFrame 类的实现
 //
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "framework.h"
 #include "MFC-2.h"
 

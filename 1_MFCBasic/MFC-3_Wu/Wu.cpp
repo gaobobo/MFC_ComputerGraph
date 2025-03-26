@@ -5,7 +5,7 @@
  * 预编译头可以加快编译速度，原因是不常更新的只编译一次，因此没有考虑移除预编译头。
  */
 // #include "pch.h"
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "Wu.h"
 
 #include <cmath>
