@@ -10,7 +10,7 @@
  */
 // #include "pch.h"
 #include "stdafx.h"
-#include "Bresenham.h"
+#include "Bresenham_Circle.h"
 
 #include "framework.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
@@ -69,12 +69,12 @@ void CMFC2ResView::OnDraw(CDC* pDC)
 
 	// TODO: 在此处为本机数据添加绘制代码
 	
-	Bresenham(pDC).DrawLine(CPoint(100, 300), CPoint(100, 600));
-	Bresenham(pDC).DrawLine(CPoint(100, 400), CPoint(100, 100));
-	Bresenham(pDC).DrawLine(CPoint(300, 100), CPoint(500, 100));
-	Bresenham(pDC).DrawLine(CPoint(400, 100), CPoint(100, 100));
-	Bresenham(pDC).DrawLine(CPoint(200, 200), CPoint(400, 100));
-	Bresenham(pDC).DrawLine(CPoint(200, 300), CPoint(100, 200));
+	Bresenham_Circle(pDC).DrawLine(CPoint(100, 300), CPoint(100, 600));
+	Bresenham_Circle(pDC).DrawLine(CPoint(100, 400), CPoint(100, 100));
+	Bresenham_Circle(pDC).DrawLine(CPoint(300, 100), CPoint(500, 100));
+	Bresenham_Circle(pDC).DrawLine(CPoint(400, 100), CPoint(100, 100));
+	Bresenham_Circle(pDC).DrawLine(CPoint(200, 200), CPoint(400, 100));
+	Bresenham_Circle(pDC).DrawLine(CPoint(200, 300), CPoint(100, 200));
 }
 
 
