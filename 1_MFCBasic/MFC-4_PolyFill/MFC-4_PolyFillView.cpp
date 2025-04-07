@@ -70,7 +70,7 @@ void CMFC4PolyFillView::OnDraw(CDC* pDC)
 							CPoint(600, 50),
 							CPoint(800, 450),
 							CPoint(550, 400)};
-	EdgePolyFill(pDC, RGB(0, 0, 0), RGB(255, 255, 255)).Draw(ploy_points, 8, 6);
+	EdgePolyFill(pDC, RGB(0, 0, 0), RGB(255, 255, 255)).Draw(ploy_points, 8, 9);
 }
 
 
