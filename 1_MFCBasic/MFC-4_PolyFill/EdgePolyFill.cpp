@@ -1,8 +1,6 @@
 ﻿#include "stdafx.h"
 #include "EdgePolyFill.h"
-
 #include <algorithm>
-#include "algorithm"
 
 EdgePolyFill::EdgePolyFill(CDC* pDC, COLORREF front_color, COLORREF back_color)
     : pDC(pDC), front_color(front_color), back_color(back_color)
