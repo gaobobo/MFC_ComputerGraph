@@ -14,5 +14,5 @@ private:
     COLORREF front_color;
     COLORREF back_color;
     
-    COLORREF get_neg_color(COLORREF color);
+    void draw_negative_point(int x, int y);
 };

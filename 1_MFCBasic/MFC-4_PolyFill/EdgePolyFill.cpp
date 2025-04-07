@@ -10,9 +10,10 @@ EdgePolyFill::EdgePolyFill(CDC* pDC, COLORREF front_color, COLORREF back_color)
     
 }
 
-COLORREF EdgePolyFill::get_neg_color(COLORREF color)
+void EdgePolyFill::draw_negative_point(int x, int y)
 {
-    return color == this->front_color ? back_color : front_color;
+    COLORREF color = this->pDC->GetPixel(x, y) == front_color ? back_color : front_color;
+    this->pDC->SetPixel(x, y, color);
 }
 
 void EdgePolyFill::Draw(CPoint* poly, int point_num, int step)
@@ -29,17 +30,12 @@ void EdgePolyFill::Draw(CPoint* poly, int point_num, int step)
         CPoint p_min =  poly[i].y < poly[i - 1].y ? poly[i] : poly[i - 1];
         double K = 1.0 * (p_min.x - p_max.x) / (p_min.y - p_max.y);
         
-        for (int y = p_min.y; y <= p_max.y; y+=step)
+        for (int y = p_min.y; y < p_max.y; y++)
         {
             for (int x = p_min.x; x <= x_end; x++)
-                for (int k = 1; k <= step; k++)
-                    this->pDC->SetPixel(
-                        x,
-                        y - k,
-                        get_neg_color(this->pDC->GetPixel(x, y))
-                    );
-
-            p_min.x += K * step;
+                draw_negative_point(x, y);
+            
+            p_min.x += y % step == 0 ? K * step : 0;
         }
     }
 }
