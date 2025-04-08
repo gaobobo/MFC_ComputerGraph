@@ -42,8 +42,8 @@ void EdgePolyFill::Draw(CPoint* poly, int point_num, int step)
                 draw_negative_point(x, y);
 
             // 防止误差过大，写时转int，而非每次累加直接转换为int。
-            x_actual += y % step == 0 ? K * step : 0;
-            p_min.x = (int)x_actual;
+            x_actual += y % step == 0 ? m * step : 0;
+            p_min.x = static_cast<int>(x_actual);
         }
     }
 }
