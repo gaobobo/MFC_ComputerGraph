@@ -169,15 +169,15 @@ void CMFC5SeedFillView::PolygonFill(CDC* pDC, CPoint* p, int n, CPoint seed, COL
 		CPoint point = element->PixelPoint;
 
 		if (pDC->GetPixel(point) == fc)
-			continue;
+			break;
 		
 		pDC->SetPixel(point, fc);
 
 		CPoint neighbor_points[] = {
-			CPoint(point.x, point.y + 1),
-			CPoint(point.x, point.y - 1),
-			CPoint(point.x + 1, point.y),
 			CPoint(point.x - 1, point.y),
+			CPoint(point.x, point.y - 1),
+			CPoint(point.x, point.y + 1),
+			CPoint(point.x + 1, point.y)
 		};
 
 		for each (CPoint i in neighbor_points)
