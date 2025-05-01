@@ -49,7 +49,7 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
 
     unsigned int center_point_code = this->EnCode(0.5 * (start.x + end.x), 0.5 * (start.y + end.y));
     
-    const double K = 1.0 * (end.y - start.y) / (end.x - start.x);
+    const double K = end.x != start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : 0.0;
     const double B = start.y - K * start.x;
 
     int intersection_x;
