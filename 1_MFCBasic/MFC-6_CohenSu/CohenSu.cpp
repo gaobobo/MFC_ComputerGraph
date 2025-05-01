@@ -26,12 +26,12 @@ unsigned int CohenSu::EnCode(double x, double y)
 
 void CohenSu::CohenSutherland(CPoint start, CPoint end)
 {
-    unsigned int code1 = this->EnCode(start.x, start.y);
-    unsigned int code2 = this->EnCode(end.x, end.y);
+    unsigned int start_code = this->EnCode(start.x, start.y);
+    unsigned int end_code = this->EnCode(end.x, end.y);
     
-    if (code1 & code2) return;
+    if (start_code & end_code) return;
     
-    if (!(code1 | code2))
+    if (!(start_code | end_code))
     {
         CPen* pPen = new CPen(PS_SOLID, 1, this->line_color);
         this->pDC->SelectObject(pPen);
@@ -41,10 +41,10 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
         return;
     }
     
-    if (code1 == 0b0000)
+    if (start_code == 0b0000)
     {
         std::swap(start, end);
-        std::swap(code1, code2);
+        std::swap(start_code, end_code);
     }
     
     const double K = end.x != start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : 0.0;
@@ -53,13 +53,13 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
     int intersection_x;
     int intersection_y;
 
-    if (code1 & 0b0011)
+    if (start_code & 0b0011)
     {
-        intersection_x = (code1 & 0b0001) ? this->window_x_left : this->window_x_right;
+        intersection_x = (start_code & 0b0001) ? this->window_x_left : this->window_x_right;
         intersection_y = K * intersection_x + B;
     } else
     {
-        intersection_y = (code1 & 0b0100) ? this->window_y_bottom : this->window_y_top;
+        intersection_y = (start_code & 0b0100) ? this->window_y_bottom : this->window_y_top;
         intersection_x = 1.0 * (intersection_y - B) / K;
     }
 
