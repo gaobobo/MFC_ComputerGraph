@@ -59,8 +59,8 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
         intersection_y = K * intersection_x + B;
     } else
     {
-        intersection_y = (code1 & 0b0100) ? this->window_y_top : this->window_y_bottom;
-        intersection_x = K * (intersection_y - B);
+        intersection_y = (code1 & 0b0100) ? this->window_y_bottom : this->window_y_top;
+        intersection_x = 1.0 * (intersection_y - B) / K;
     }
 
     CPoint intersection_point = CPoint(intersection_x, intersection_y);
