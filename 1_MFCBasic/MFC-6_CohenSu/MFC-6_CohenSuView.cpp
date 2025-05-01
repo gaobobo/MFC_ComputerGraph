@@ -6,6 +6,7 @@
  */
 // #include "pch.h"
 #include "stdafx.h"
+#include "CohenSu.h"
 
 // MFC-6_CohenSuView.cpp: CMFC6CohenSuView 类的实现
 //
@@ -58,7 +59,7 @@ BOOL CMFC6CohenSuView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFC6CohenSuView 绘图
 
-void CMFC6CohenSuView::OnDraw(CDC* /*pDC*/)
+void CMFC6CohenSuView::OnDraw(CDC* pDC)
 {
 	CMFC6CohenSuDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -66,6 +67,13 @@ void CMFC6CohenSuView::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+
+	auto drawer = CohenSu(250, 850, 450, 250, RGB(0, 0, 0), RGB(255, 0, 0), pDC);
+	drawer.OnDraw();
+
+	drawer.CohenSutherland(CPoint(260, 260), CPoint(750, 350));
+	drawer.CohenSutherland(CPoint(200, 200), CPoint(100, 500));
+	drawer.CohenSutherland(CPoint(100, 100), CPoint(300, 350));
 }
 
 
