@@ -73,7 +73,7 @@ void CMFC6CohenSuView::OnDraw(CDC* pDC)
 
 	drawer.CohenSutherland(CPoint(260, 260), CPoint(750, 350));
 	drawer.CohenSutherland(CPoint(200, 200), CPoint(100, 500));
-	drawer.CohenSutherland(CPoint(100, 100), CPoint(300, 350));
+	drawer.CohenSutherland(CPoint(100, 100), CPoint(600, 350));
 }
 
 
