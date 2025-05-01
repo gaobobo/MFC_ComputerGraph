@@ -38,7 +38,7 @@ public:
 	/**
 	 * 出栈
 	 */
-	Stack_node *Pop();//出栈
+	Stack_node *Pop();
 
 
 // 重写
