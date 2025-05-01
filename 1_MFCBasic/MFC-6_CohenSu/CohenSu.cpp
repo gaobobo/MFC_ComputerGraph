@@ -46,8 +46,6 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
         std::swap(start, end);
         std::swap(code1, code2);
     }
-
-    unsigned int center_point_code = this->EnCode(0.5 * (start.x + end.x), 0.5 * (start.y + end.y));
     
     const double K = end.x != start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : 0.0;
     const double B = start.y - K * start.x;
@@ -55,19 +53,18 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
     int intersection_x;
     int intersection_y;
 
-    if (center_point_code & 0b0011)
+    if (code1 & 0b0011)
     {
-        intersection_x = (center_point_code & 0b0001) ? this->window_x_left : this->window_x_right;
+        intersection_x = (code1 & 0b0001) ? this->window_x_left : this->window_x_right;
         intersection_y = K * intersection_x + B;
     } else
     {
-        intersection_y = (center_point_code & 0b0100) ? this->window_y_top : this->window_y_bottom;
+        intersection_y = (code1 & 0b0100) ? this->window_y_top : this->window_y_bottom;
         intersection_x = K * (intersection_y - B);
     }
 
     CPoint intersection_point = CPoint(intersection_x, intersection_y);
     this->CohenSutherland(intersection_point, end);
-    
 }
 
 void CohenSu::OnDraw()
