@@ -71,9 +71,9 @@ void CMFC6CohenSuView::OnDraw(CDC* pDC)
 	auto drawer = CohenSu(250, 850, 450, 250, RGB(0, 0, 0), RGB(255, 0, 0), pDC);
 	drawer.OnDraw();
 
-	drawer.CohenSutherland(CPoint(260, 260), CPoint(750, 350));
-	drawer.CohenSutherland(CPoint(200, 200), CPoint(100, 500));
-	drawer.CohenSutherland(CPoint(100, 100), CPoint(600, 350));
+	drawer.CohenSutherland(CPoint(250, 150), CPoint(850, 500));
+	drawer.CohenSutherland(CPoint(250, 300), CPoint(800, 350));
+	drawer.CohenSutherland(CPoint(220, 300), CPoint(230, 350));
 }
 
 
