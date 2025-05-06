@@ -10,9 +10,9 @@
 #include <strstream>
 
 
-CohenSu::CohenSu(int wxl, int wxr, int wyb, int wyt, COLORREF boarder, COLORREF line, CDC* pDC)
+CohenSu::CohenSu(int wxl, int wxr, int wyb, int wyt, COLORREF window_boarder_colorref, COLORREF line_colorref, CDC* pDC)
     : window_x_left(wxl), window_x_right(wxr), window_y_bottom(wyb), window_y_top(wyt),
-        boarder_color(boarder), line_color(line), pDC(pDC)
+        window_color(window_boarder_colorref), line_color(line_colorref), pDC(pDC)
 {
 }
 
@@ -69,7 +69,7 @@ void CohenSu::CohenSutherland(CPoint start, CPoint end)
 
 void CohenSu::OnDraw()
 {
-    CPen* pPen = new CPen(PS_SOLID, 1, this->boarder_color);
+    CPen* pPen = new CPen(PS_SOLID, 1, this->window_color);
     this->pDC->SelectObject(pPen);
     this->pDC->Rectangle(this->window_x_left,
                         this->window_y_top,
