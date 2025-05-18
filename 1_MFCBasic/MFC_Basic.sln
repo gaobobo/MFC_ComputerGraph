@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-5_SeedFill", "MFC-5_See
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-6_CohenSu", "MFC-6_CohenSu\MFC-6_CohenSu.vcxproj", "{16BE3EBA-5C07-42AC-73C2-7D5B07146846}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-7_3DTrans", "MFC-7_3DTrans\MFC-7_3DTrans.vcxproj", "{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{16BE3EBA-5C07-42AC-73C2-7D5B07146846}.Release|x64.Build.0 = Release|x64
 		{16BE3EBA-5C07-42AC-73C2-7D5B07146846}.Release|x86.ActiveCfg = Release|Win32
 		{16BE3EBA-5C07-42AC-73C2-7D5B07146846}.Release|x86.Build.0 = Release|Win32
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Debug|x64.ActiveCfg = Debug|x64
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Debug|x64.Build.0 = Debug|x64
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Debug|x86.Build.0 = Debug|Win32
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Release|x64.ActiveCfg = Release|x64
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Release|x64.Build.0 = Release|x64
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Release|x86.ActiveCfg = Release|Win32
+		{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
