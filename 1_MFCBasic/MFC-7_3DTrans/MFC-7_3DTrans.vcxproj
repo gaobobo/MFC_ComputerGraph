@@ -183,6 +183,8 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="3DPolyDraw.h" />
+    <ClInclude Include="3DStuctions.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MFC-7_3DTrans.h" />
@@ -193,6 +195,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="3DPolyDraw.cpp" />
+    <ClCompile Include="3DStuctions.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MFC-7_3DTrans.cpp" />
     <ClCompile Include="MFC-7_3DTransDoc.cpp" />

@@ -12,6 +12,7 @@
 
 #include "MFC-7_3DTransDoc.h"
 #include "MFC-7_3DTransView.h"
+#include "3DPolyDraw.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -51,7 +52,7 @@ BOOL CMFC73DTransView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFC73DTransView 绘图
 
-void CMFC73DTransView::OnDraw(CDC* /*pDC*/)
+void CMFC73DTransView::OnDraw(CDC* pDC)
 {
 	CMFC73DTransDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -59,6 +60,7 @@ void CMFC73DTransView::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	PolyDraw3D().OnDraw(pDC);
 }
 
 
