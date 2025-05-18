@@ -1,2 +1,2 @@
-﻿#include "pch.h"
+﻿#include "stdafx.h"
 #include "3DStuctions.h"
