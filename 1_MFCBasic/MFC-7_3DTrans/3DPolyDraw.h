@@ -6,7 +6,7 @@ class PolyDraw3D
 {
     public:
     PolyDraw3D(float a = 100.0f);
-    void OnDraw(CDC* pDC, int scale = 1);
+    void OnDraw(CDC* pDC);
 
     private:
     POINT3 points[8];

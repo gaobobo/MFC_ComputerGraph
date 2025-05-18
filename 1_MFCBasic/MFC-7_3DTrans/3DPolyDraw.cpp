@@ -37,7 +37,7 @@ PolyDraw3D::PolyDraw3D(float a)
     memcpy(this->faces, faces, sizeof(faces));
 }
 
-void PolyDraw3D::OnDraw(CDC* pDC, int scale)
+void PolyDraw3D::OnDraw(CDC* pDC)
 {
     this->rotation_z();
     this->translation(200.0f, 200.0f, 0.0f);
