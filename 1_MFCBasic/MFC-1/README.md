@@ -295,7 +295,7 @@ pBrushOld=pDC->SelectObject(&BrushNew);
 
    ![ex2](.doc/ex2.png)
 
-3. 定义一支绿色实线，宽度为2的画笔，绘制一个圆，并用蓝色阴影画刷填充图形内部，阴影样式为HS_DIAGCROSS；
+3. 定义一支绿色实线，宽度为2的画笔，绘制一个圆，并用蓝色阴影画刷填充图形内部，阴影样式为`HS_DIAGCROSS`；
 
     ```c++
     // circle
