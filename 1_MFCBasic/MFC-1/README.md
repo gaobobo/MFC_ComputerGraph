@@ -268,11 +268,6 @@ pBrushOld=pDC->SelectObject(&BrushNew);
     ```c++
     CPen blue_3_solid_pen(PS_SOLID, 3, RGB(0, 0, 255));
     
-    CPen red_1_dot_pen(PS_DOT, 1, RGB(255, 0, 0));
-    
-    CPen green_2_solid_pen(PS_SOLID, 2, RGB(0, 255, 0));
-    CBrush blue_cross_brush(HS_DIAGCROSS, RGB(0, 0, 255));
-    
     // line
     pDC->SelectObject(&blue_3_solid_pen);
     pDC->MoveTo(10, 10);
@@ -286,7 +281,9 @@ pBrushOld=pDC->SelectObject(&BrushNew);
 2. 定义一支红色点线，宽度为1的画笔，绘制一个正方形（大小自由定义），左上角在并用蓝色实体画刷填充图形内部；
 
     ```c++
-    //squar
+   CPen red_1_dot_pen(PS_DOT, 1, RGB(255, 0, 0));
+   
+   //squar
     pDC->SelectObject(&red_1_dot_pen);
     pDC->Rectangle(120, 10, 230, 110);
 
@@ -298,6 +295,9 @@ pBrushOld=pDC->SelectObject(&BrushNew);
 3. 定义一支绿色实线，宽度为2的画笔，绘制一个圆，并用蓝色阴影画刷填充图形内部，阴影样式为`HS_DIAGCROSS`；
 
     ```c++
+    CPen green_2_solid_pen(PS_SOLID, 2, RGB(0, 255, 0));
+    CBrush blue_cross_brush(HS_DIAGCROSS, RGB(0, 0, 255)); 
+   
     // circle
     pDC->SelectObject(&green_2_solid_pen);
     pDC->SelectObject(&blue_cross_brush);
