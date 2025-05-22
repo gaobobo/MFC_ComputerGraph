@@ -26,14 +26,14 @@ $P(y,x)$ 、 $P(-y,x)$ 、 $P(x,-y)$ 、 $P(-x,-y)$ 、 $P(-y,-x)$ 、 $P(y,-x)$
 1. 初始化， $x=0$ 、 $y=r$ 、 $d=1.25-r$ ；
 2. 当 $x_i<y_i$ 时，执行以下操作：
 
-   1. 画像素点 $(x_i,y_i)$ ；
-   2. 求下一个像素点：
+   i. 画像素点 $(x_i,y_i)$ ；
+   ii. 求下一个像素点：
 
 $$x_{i+1}=x_i+1$$
 
 $$y_{i+1}= \left\lbrace \begin{matrix} y_i, & d_i < 0 \\\ y_i - 1, & d_i \ge 0 \end{matrix} \right.$$
 
-   3. 求下一步的误差：
+   iii. 求下一步的误差：
 
 $$d_{i+1}= \left\lbrace \begin{matrix} d_i + 2x_i + 3, & d_i < 0 \\\ d_i + 2(x_i - y_i) + 5, & d_i \ge 0 \end{matrix} \right.$$
 
