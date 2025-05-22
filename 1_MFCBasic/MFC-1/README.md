@@ -154,6 +154,7 @@ BOOL Ellipse (CRect rect);
     |    PS_NULL     | 空的边框 |
     | PS_INSIDEFRAME | 边框实验 |
     
+    > [!TIP]
     > 注：各种虚线只有当线宽为1时才有效。
     > 
     > 例如：`CPen pen = CPen(PS_SOLID,3,RGB(0,255,0));`定义了一个宽3个像素绿色实线画笔。
