@@ -213,6 +213,15 @@
     <Image Include="res\MFC-2Doc.ico" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include=".doc\doc1-1.png" />
+    <Content Include=".doc\doc1-2.png" />
+    <Content Include=".doc\doc1-3.png" />
+    <Content Include=".doc\ex1.png" />
+    <Content Include=".doc\ex2.png" />
+    <Content Include=".doc\ex3.png" />
+    <Content Include="README.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
