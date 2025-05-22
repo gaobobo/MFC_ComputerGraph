@@ -18,22 +18,22 @@
 
 #### 1. 选择 文件——新建——项目，打开项目新建对话框如下：
 
-![1-1](./.doc/doc1-1.png)
+![1-1](.doc/doc1-1.png)
 
 
 在上图的对话框中选择MFC应用程序，选择项目的存放位置，输入项目名称。点击下一步后进入创建项目向导。
 
 #### 2. 在选择应用程序类型步骤中，选择应用程序类型是“单文档”，项目类型是“MFC标准”，其他选项保持默认。
 
-![1-2](./.doc/doc1-2.png)
+![1-2](.doc/doc1-2.png)
 
 #### 3. 向导中其他步骤的选项都保持默认，就可以创建一个MFC的项目。如下图所示：
 
-![1-3](./.doc/doc1-3.png)
+![1-3](.doc/doc1-3.png)
 
 此时点击运行按钮或者按F5执行程序，会弹出如下窗口：
 
-![1-4](./.doc/doc1-4.png)
+![1-4](.doc/doc1-4.png)
 
 ### 二、MFC绘图方法
 
@@ -281,7 +281,7 @@ pBrushOld=pDC->SelectObject(&BrushNew);
     blue_3_solid_pen.DeleteObject();
     ```
    
-    ![ex1](./.doc/ex1.png)
+    ![ex1](.doc/ex1.png)
 
 2. 定义一支红色点线，宽度为1的画笔，绘制一个正方形（大小自由定义），左上角在并用蓝色实体画刷填充图形内部；
 
@@ -293,7 +293,7 @@ pBrushOld=pDC->SelectObject(&BrushNew);
     red_1_dot_pen.DeleteObject();
     ```
 
-   ![ex2](./.doc/ex2.png)
+   ![ex2](.doc/ex2.png)
 
 3. 定义一支绿色实线，宽度为2的画笔，绘制一个圆，并用蓝色阴影画刷填充图形内部，阴影样式为HS_DIAGCROSS；
 
@@ -307,7 +307,7 @@ pBrushOld=pDC->SelectObject(&BrushNew);
     blue_cross_brush.DeleteObject();
     ```
 
-    ![ex3](./.doc/ex3.png)
+    ![ex3](.doc/ex3.png)
 
 ## 小结
 了解了MFC的绘图基础及画笔、画刷的使用。
