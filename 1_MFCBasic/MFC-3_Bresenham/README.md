@@ -38,7 +38,7 @@ y_{i+1}=
 
 \left\{
    \begin{matrix}
-      y_i, & d_i < 0 \\
+      y_i, & d_i < 0 \\\
       y_i - 1, & d_i \ge 0
    \end{matrix}
 \right.
@@ -51,7 +51,7 @@ d_{i+1}=
 
 \left\{
    \begin{matrix}
-      d_i + 2x_i + 3, & d_i < 0 \\
+      d_i + 2x_i + 3, & d_i < 0 \\\
       d_i + 2(x_i - y_i) + 5, & d_i \ge 0
    \end{matrix}
 \right.
