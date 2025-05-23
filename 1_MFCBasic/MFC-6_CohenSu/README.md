@@ -29,7 +29,7 @@ Cohen Sutherland裁剪算法
 
 1. 对直线的两个端点进行编码
 
-    编码方式：
+    **编码方式：**
 
     - 若 $x$ 小于`wxl`（`window_x_left`）， $D_0=1$ ，否则 $D_0=0$ ，即 $C_1 \vee 0001$ ；
     - 若 $x$ 大于 `wxr`（`window_x_right`）， $D_1=1$ ，否则 $D_1=0$ ，即 $C_1 \vee 0010$ ；
