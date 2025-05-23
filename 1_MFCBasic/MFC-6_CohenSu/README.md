@@ -39,9 +39,9 @@ Cohen Sutherland裁剪算法
 $$
 \begin{array}{c:c:c}
     1001 & 1000 & 1010 \\
-    \hdashline
+    \hdashline  
     0001 & 0000 & 0010 \\
-    \hdashline
+    \hdashline  
     0101 & 0100 & 0110
 \end{array}
 $$
