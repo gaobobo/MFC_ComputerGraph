@@ -137,20 +137,22 @@ void PolyDraw3D::matrix_operation(float transform[4][4])
 
 4. 定义函数实现三维形体的绘制，根据面表和投影变换后的顶点表进行三维形体绘制。
 函数代码：
-    CPen* pPen = new CPen(PS_SOLID, 1, RGB(0, 0, 0));
-    pDC->SelectObject(pPen);
-    
-    for (int i = 0; i < 6; i++)
-    {
-        pDC->MoveTo(this->points[this->faces[i].e[0]].x, this->points[this->faces[i].e[0]].y);
-        pDC->LineTo(this->points[this->faces[i].e[1]].x, this->points[this->faces[i].e[1]].y);
-        pDC->LineTo(this->points[this->faces[i].e[2]].x, this->points[this->faces[i].e[2]].y);
-        pDC->LineTo(this->points[this->faces[i].e[3]].x, this->points[this->faces[i].e[3]].y);
-        pDC->LineTo(this->points[this->faces[i].e[0]].x, this->points[this->faces[i].e[0]].y);
-    }
 
-    pPen->DeleteObject();
+```c++
+CPen* pPen = new CPen(PS_SOLID, 1, RGB(0, 0, 0));
+pDC->SelectObject(pPen);
 
+for (int i = 0; i < 6; i++)
+{
+    pDC->MoveTo(this->points[this->faces[i].e[0]].x, this->points[this->faces[i].e[0]].y);
+    pDC->LineTo(this->points[this->faces[i].e[1]].x, this->points[this->faces[i].e[1]].y);
+    pDC->LineTo(this->points[this->faces[i].e[2]].x, this->points[this->faces[i].e[2]].y);
+    pDC->LineTo(this->points[this->faces[i].e[3]].x, this->points[this->faces[i].e[3]].y);
+    pDC->LineTo(this->points[this->faces[i].e[0]].x, this->points[this->faces[i].e[0]].y);
+}
+
+pPen->DeleteObject();
+```
 
 
 ## 5. 在`OnDraw()`中实现将立方体围绕 $z$ 轴旋转 $15^\circ$ ，然后沿 $x$ ， $y$ 轴各平移 $(200,200)$ 。最后，做投影中心（视点）在 $(0,0,400)$ ，投影面在 $_XO_Y$ 平面的投影。
