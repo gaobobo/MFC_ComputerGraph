@@ -152,7 +152,7 @@ BOOL Ellipse (CRect rect);
     |   PS_DASHDOT   | 点划线  |
     | PS_DASHDOTDOT  | 双点划线 |
     |    PS_NULL     | 空的边框 |
-    | PS_INSIDEFRAME | 边框实验 |
+    | PS_INSIDEFRAME | 边框实线 |
     
 > [!TIP]
 > 
