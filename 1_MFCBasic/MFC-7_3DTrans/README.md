@@ -163,7 +163,7 @@ pPen->DeleteObject();
 - $\cos (15^\circ) = 0.96592582628907$ 
 - 绕 $z$ 轴旋转的变换矩阵：
 
-```math
+$$
 R_z(\theta)=
 \begin{bmatrix}
     \cos \theta & \sin \theta & 0 & 0 \\
@@ -171,7 +171,7 @@ R_z(\theta)=
     0 & 0 & 1 & 0 \\
     0 & 0 & 0 & 1
 \end{bmatrix}
-```
+$$
 
 - 透视变换的矩阵：
 
@@ -179,14 +179,14 @@ R_z(\theta)=
 
   <img alt="1-1" height="350" src=".doc/doc1-1.svg" width=""/>
 
-```math
+$$
 \begin{bmatrix}
     \cos \theta & -\cos \varphi \sin \theta & 0 & \frac{-\sin \varphi \sin \theta}{d} \\
     0 & \sin \varphi & 0 & \frac{-\cos \varphi}{d} \\
     -\sin \theta & -\cos \varphi \cos \theta & 0 & \frac{-\sin \varphi \cos \theta}{d} \\
     0 & 0 & 0 & \frac{R}{d}
 \end{bmatrix}
-```
+$$
 
 **旋转矩阵的定义代码：**
 
