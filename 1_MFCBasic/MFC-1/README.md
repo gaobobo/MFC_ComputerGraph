@@ -189,7 +189,7 @@ pPenOld=pDC->SelectObject(&PenNew);
 ##### 3) 删除画笔
 
 创建和选择画笔后，就可以使用该画笔对象进行绘图了。绘图完成后，为了及时释放内存资源，应该调用成员函数
-`CDC：：SelectObject()`恢复以前保存的画笔对象；调用成员函数`CgdiObject::DeleteObject()`删除当前画笔对象。代码如下：
+`CDC::SelectObject()`恢复以前保存的画笔对象；调用成员函数`CgdiObject::DeleteObject()`删除当前画笔对象。代码如下：
 
 ```c++
 pDC->SelectObject(pPenOld);
