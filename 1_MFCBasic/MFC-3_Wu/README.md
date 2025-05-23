@@ -35,8 +35,7 @@ x_{i+1}=x_i+1
 $$
 
 $$
-y_{i+1}= 
-
+y_{i+1}=
 \left\lbrace 
    \begin{matrix} 
       y_i, & d_i < 0 \\\ 
@@ -48,8 +47,7 @@ $$
    iii. 求下一步的误差：
 
 $$
-d_{i+1}= 
-
+d_{i+1}=
 \left\lbrace 
    \begin{matrix} 
       d_i + 2x_i + 3, & d_i < 0 \\\ 
