@@ -213,6 +213,10 @@
     <Image Include="res\MFC-5_SeedFillDoc.ico" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include=".doc\ex1.png" />
+    <Content Include="README.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
