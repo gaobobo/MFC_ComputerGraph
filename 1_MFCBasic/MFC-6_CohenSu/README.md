@@ -117,76 +117,76 @@ flowchart TD
 >
 > 提示：编码的代码实现区域编码思路：如,端点在裁剪窗口左侧，其编码最后一位为1，可以按位或0001，将编码最后一位至1。
 
-    ```c++
-    unsigned int CohenSu::EnCode(double x, double y)
-    {
-        return (x < this->window_x_left) |
-            (x > this->window_x_right) << 1 |
-            (y > this->window_y_bottom) << 2 |
-            (y < this->window_y_top) << 3;
-    }
-    ```
+ ```c++
+ unsigned int CohenSu::EnCode(double x, double y)
+ {
+     return (x < this->window_x_left) |
+         (x > this->window_x_right) << 1 |
+         (y > this->window_y_bottom) << 2 |
+         (y < this->window_y_top) << 3;
+ }
+ ```
 
 2. 写出裁剪函数`CohenSutherland()`，并在`OnDraw()`里面绘制出裁剪窗口，绘制出裁剪后的直线，测试裁剪结果是否正确，给出至少三种情况的直线的裁剪，第一种情况，全部保留，第二种情况，完全去除，第三种情况，直线需要剪切。
 
-    ```c++
-    void CohenSu::CohenSutherland(CPoint start, CPoint end)
-    {
-        unsigned int start_code = this->EnCode(start.x, start.y);
-        unsigned int end_code = this->EnCode(end.x, end.y);
-        
-        if (start_code & end_code) return;
-        
-        if (!(start_code | end_code))
-        {
-            CPen* pPen = new CPen(PS_SOLID, 1, this->line_color);
-            this->pDC->SelectObject(pPen);
-            this->pDC->MoveTo(start);
-            this->pDC->LineTo(end);
-            pPen->DeleteObject();
-            return;
-        }
-        
-        if (start_code == 0b0000)
-        {
-            std::swap(start, end);
-            std::swap(start_code, end_code);
-        }
-        
-        const double K = end.x != start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : 0.0;
-        const double B = start.y - K * start.x;
+ ```c++
+ void CohenSu::CohenSutherland(CPoint start, CPoint end)
+ {
+     unsigned int start_code = this->EnCode(start.x, start.y);
+     unsigned int end_code = this->EnCode(end.x, end.y);
+     
+     if (start_code & end_code) return;
+     
+     if (!(start_code | end_code))
+     {
+         CPen* pPen = new CPen(PS_SOLID, 1, this->line_color);
+         this->pDC->SelectObject(pPen);
+         this->pDC->MoveTo(start);
+         this->pDC->LineTo(end);
+         pPen->DeleteObject();
+         return;
+     }
+     
+     if (start_code == 0b0000)
+     {
+         std::swap(start, end);
+         std::swap(start_code, end_code);
+     }
+     
+     const double K = end.x != start.x ? 1.0 * (end.y - start.y) / (end.x - start.x) : 0.0;
+     const double B = start.y - K * start.x;
 
-        int intersection_x;
-        int intersection_y;
+     int intersection_x;
+     int intersection_y;
 
-        if (start_code & 0b0011)
-        {
-            intersection_x = (start_code & 0b0001) ? this->window_x_left : this->window_x_right;
-            intersection_y = K * intersection_x + B;
-        } else
-        {
-            intersection_y = (start_code & 0b0100) ? this->window_y_bottom : this->window_y_top;
-            intersection_x = 1.0 * (intersection_y - B) / K;
-        }
+     if (start_code & 0b0011)
+     {
+         intersection_x = (start_code & 0b0001) ? this->window_x_left : this->window_x_right;
+         intersection_y = K * intersection_x + B;
+     } else
+     {
+         intersection_y = (start_code & 0b0100) ? this->window_y_bottom : this->window_y_top;
+         intersection_x = 1.0 * (intersection_y - B) / K;
+     }
 
-        CPoint intersection_point = CPoint(intersection_x, intersection_y);
-        this->CohenSutherland(intersection_point, end);
-    }
+     CPoint intersection_point = CPoint(intersection_x, intersection_y);
+     this->CohenSutherland(intersection_point, end);
+ }
 
-    void CohenSu::OnDraw()
-    {
-        CPen* pPen = new CPen(PS_SOLID, 1, this->window_color);
-        this->pDC->SelectObject(pPen);
-        this->pDC->Rectangle(this->window_x_left,
-                            this->window_y_top,
-                            this->window_x_right,
-                            this->window_y_bottom);
+ void CohenSu::OnDraw()
+ {
+     CPen* pPen = new CPen(PS_SOLID, 1, this->window_color);
+     this->pDC->SelectObject(pPen);
+     this->pDC->Rectangle(this->window_x_left,
+                         this->window_y_top,
+                         this->window_x_right,
+                         this->window_y_bottom);
 
-        pPen->DeleteObject();
-    }
-    ```
+     pPen->DeleteObject();
+ }
+ ```
 
-    ![ex1](.doc/ex1.png)
+ ![ex1](.doc/ex1.png)
 
 ## 小结
 
