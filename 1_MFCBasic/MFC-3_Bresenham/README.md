@@ -17,7 +17,7 @@
 
 **圆的八对称性：**
 
-根据圆的对称性，可以用四条对称轴 $x=0$ 、 $y=0$ 、 $x=y$ 、 $x=-y$ 将圆分成8等份。只要绘制出第一象限内的 $\frac{1}{8}$ 
+根据圆的对称性，可以用四条对称轴 $x=0$ 、 $y=0$ 、 $x=y$ 、 $x=-y$ 将圆分成8等份。只要绘制出第一象限内的 $\frac{1}{8}$
 圆弧，根据对称性就可绘制出整圆，这称为八分法画圆算法。假定第一象限内的任意点为 $P(x,y)$ ，可以顺时针确定另外7个点：
 $P(y,x)$ 、 $P(-y,x)$ 、 $P(x,-y)$ 、 $P(-x,-y)$ 、 $P(-y,-x)$ 、 $P(y,-x)$ 、 $P(-x,y)$ 。
 
@@ -30,17 +30,35 @@ $P(y,x)$ 、 $P(-y,x)$ 、 $P(x,-y)$ 、 $P(-x,-y)$ 、 $P(-y,-x)$ 、 $P(y,-x)$
 
    ii. 求下一个像素点：
 
-$$x_{i+1}=x_i+1$$
+$$
+x_{i+1}=x_i+1
+$$
 
-$$y_{i+1}= \left\lbrace \begin{matrix} y_i, & d_i < 0 \\\ y_i - 1, & d_i \ge 0 \end{matrix} \right.$$
+$$
+y_{i+1}=
+\left\lbrace
+\begin{matrix}
+y_i, & d_i < 0 \\\
+y_i - 1, & d_i \ge 0
+\end{matrix}
+\right.
+$$
 
-   iii. 求下一步的误差：
+iii. 求下一步的误差：
 
-$$d_{i+1}= \left\lbrace \begin{matrix} d_i + 2x_i + 3, & d_i < 0 \\\ d_i + 2(x_i - y_i) + 5, & d_i \ge 0 \end{matrix} \right.$$
+$$
+d_{i+1}=
+\left\lbrace
+\begin{matrix}
+d_i + 2x_i + 3, & d_i < 0 \\\
+d_i + 2(x_i - y_i) + 5, & d_i \ge 0
+\end{matrix}
+\right.
+$$
 
 3. 若 $x_i = y_i$ ，画像素点 $(x,y)$ ；否则重复第二步。
 
-## 二、wu反走样
+### 二、wu反走样
 
 Wu反走样算法原理是对于理想直线上的任一点，同时以两个不同亮度级别的相邻像素来表示。
 
