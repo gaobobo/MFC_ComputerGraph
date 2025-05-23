@@ -45,15 +45,15 @@ $P(y,x)$ 、 $P(-y,x)$ 、 $P(x,-y)$ 、 $P(-x,-y)$ 、 $P(-y,-x)$ 、 $P(y,-x)$
 
    3. 求下一步的误差：
 
-      ```math
-      d_{i+1}=
-      \left\lbrace 
-         \begin{matrix} 
-            d_i + 2x_i + 3, & d_i < 0 \\\ 
-            d_i + 2(x_i - y_i) + 5, & d_i \ge 0 
-         \end{matrix} 
-      \right.
-      ```
+   ```math
+   d_{i+1}=
+   \left\lbrace 
+      \begin{matrix} 
+         d_i + 2x_i + 3, & d_i < 0 \\\ 
+         d_i + 2(x_i - y_i) + 5, & d_i \ge 0 
+      \end{matrix} 
+   \right.
+   ```
 
 3. 若 $x_i = y_i$ ，画像素点 $(x,y)$ ；否则重复第二步。
 
