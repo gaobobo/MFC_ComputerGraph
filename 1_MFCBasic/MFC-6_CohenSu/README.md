@@ -37,11 +37,11 @@ Cohen Sutherland裁剪算法
     - 若 $y$ 大于`wyt`（`window_y_top`）， $D_3=1$ ，否则 $D_3=0$ ，即 $C_1 \vee 1000$ 。
 
 $$
-\begin{array}{c:c:c}
+\begin{array}{c|c|c}
     1001 & 1000 & 1010 \\
-    \hdashline  
+    \hline
     0001 & 0000 & 0010 \\
-    \hdashline  
+    \hline
     0101 & 0100 & 0110
 \end{array}
 $$
