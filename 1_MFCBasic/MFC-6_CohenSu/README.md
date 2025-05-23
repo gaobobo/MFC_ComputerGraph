@@ -36,7 +36,7 @@ Cohen Sutherland裁剪算法
     - 若 $y$ 小于`wyb`（`window_y_bottom`）， $D_2=1$ ，否则 $D_2=0$ ，即 $C_1 \vee 0100$ ；
     - 若 $y$ 大于`wyt`（`window_y_top`）， $D_3=1$ ，否则 $D_3=0$ ，即 $C_1 \vee 1000$ 。
 
-```math
+$$
 \begin{array}{c:c:c}
     1001 & 1000 & 1010 \\
     \hdashline
@@ -44,7 +44,7 @@ Cohen Sutherland裁剪算法
     \hdashline
     0101 & 0100 & 0110
 \end{array}
-```
+$$
 
 2. 进行区域测试
 
