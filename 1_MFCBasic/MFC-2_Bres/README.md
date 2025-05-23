@@ -128,7 +128,7 @@ $$(200,300)\leftrightarrow (100,200)$$
 
    ![ex1](.doc/ex1.png)
 
-2. 使用Bresenham算法实现斜率 0<k<1的直线的生成
+2. 使用Bresenham算法实现斜率 $0 < k < 1$ 的直线的生成
 
    ```c++
    void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
