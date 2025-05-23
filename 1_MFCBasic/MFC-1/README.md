@@ -130,7 +130,7 @@ BOOL Ellipse (CRect rect);
 
 创建画笔可以采用两种方法：
 
-- 一种方法是通过调用画笔Cpen类的一个带参构造函数来构造一个Cpen类画笔对象。
+- 一种方法是通过调用画笔`Cpen`类的一个带参构造函数来构造一个`Cpen`类画笔对象。
 
     ```c++
     Cpen (int nPenStyle，int nWidth，COLORREF rgbColor)
