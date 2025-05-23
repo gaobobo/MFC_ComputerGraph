@@ -169,7 +169,7 @@ $$(200,300)\leftrightarrow (100,200)$$
    
    ![ex2](.doc/ex2.png)
 
-3. 扩展题*选做：实现任意斜率直线Bresenham扫描转换算法。
+3. **扩展题***选做：实现任意斜率直线Bresenham扫描转换算法。
 
    ```c++
    void Bresenham::DrawLine(CPoint start, CPoint end, COLORREF color)
