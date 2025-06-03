@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/AET.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Face.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Face.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Light.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Light.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Lighting.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Lighting.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/MainFrm.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/MainFrm.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Material.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Material.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/P3.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/P3.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/ReadMe.txt" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Test.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Test.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/TestView.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Vector.cpp" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/MFC-8_IllumineModel/Vector.h" charset="GB2312" />
+  </component>
+</project>
