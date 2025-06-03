@@ -10,7 +10,7 @@
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/Test.vcxproj" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj" />
     </configuration_1>
     <configuration_2 setup="1">
       <option name="CONFIGURATION" value="Debug" />
@@ -22,10 +22,10 @@
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/Test.vcxproj" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj" />
     </configuration_2>
-    <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/Test.vcxproj" />
-    <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/Test.vcxproj" />
+    <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj" />
+    <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj" />
     <option name="AUTO_SELECT_PRIORITY" value="0" />
     <method v="2">
       <option name="Build" />
