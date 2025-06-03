@@ -8,17 +8,18 @@
 
 包含下列内容：
 
-| 项目名称                      |                                           位置                                           | 备注                          |                              结果                              |
-|:--------------------------|:--------------------------------------------------------------------------------------:|:----------------------------|:------------------------------------------------------------:|
-| `MFC-1.vcxproj`           |                [`/1_MFCBasic/MFC-1/MFC-1.vcxproj`](./1_MFCBasic/MFC-1/)                | MFC绘图基础                     |             ![MFC-1 MFCBasic](./.doc/MFC-1.png)              |
-| `MFC-2_Bres.vcxproj`      |        [`/1_MFCBasic/MFC-2_Bres/MFC-2_Bres.vcxproj`](./1_MFCBasic/MFC-2_Bres/)         | 直线绘制算法：Bresenham算法          |          ![MFC-2 Bresenham](./.doc/MFC-2_Bres.png)           |
-| `MFC-2_DDA.vcxproj`       |          [`/1_MFCBasic/MFC-2_DDA/MFC-2_DDA.vcxproj`](./1_MFCBasic/MFC-2_DDA/)          | 直线绘制算法：DDA算法                |              ![MFC-2 DDA](./.doc/MFC-2_DDA.png)              |
-| `MFC-3_Bresenham.vcxproj` | [`/1_MFCBasic/MFC-3_Bresenham/MFC-3_Bresenham.vcxproj`](./1_MFCBasic/MFC-3_Bresenham/) | 圆绘制算法：Bresenham扫描算法         |          ![MFC-3 Bresenham](./.doc/MFC-3_Bres.png)           |
-| `MFC-3_Wu.vcxproj`        |           [`/1_MFCBasic/MFC-3_Wu/MFC-3_Wu.vcxproj`](./1_MFCBasic/MFC-3_Wu/)            | 直线绘制算法：Wu反走样算法              |               ![MFC-3 Wu](./.doc/MFC-3_Wu.png)               |
-| `MFC-4_PolyFill.vcxproj`  |  [`/1_MFCBasic/MFC-4_PolyFill/MFC-4_PolyFill.vcxproj`](./1_MFCBasic/MFC-4_PolyFill/)   | 多边形填充算法：边标志边缘填充算法           |      ![MFC-4 Edge Flag Fill](./.doc/MFC-4_PolyFill.png)      |
-| `MFC-5_SeedFill.vcxproj`  |  [`/1_MFCBasic/MFC-5_SeedFill/MFC-5_SeedFill.vcxproj`](./1_MFCBasic/MFC-5_SeedFill/)   | 多边形填充算法：种子填充算法              |        ![MFC-5 Seed Fill](./.doc/MFC-5_SeedFill.png)         |
-| `MFC-6_CorhenSu.vcxproj`  |  [`/1_MFCBasic/MFC-6_CorhenSu/MFC-6_CorhenSu.vcxproj`](./1_MFCBasic/MFC-6_CorhenSu/)   | 剪裁算法：Cohen Sutherland直线剪裁算法 |     ![MFC-6 Cohen Sutherland](./.doc/MFC-6_CohenSu.png)      |
-| `MFC-7_3DTrans.vcxproj`   |    [`/1_MFCBasic/MFC-7_3DTrans/MFC-7_3DTrans.vcxproj`](./1_MFCBasic/MFC-7_3DTrans/)    | 三维变换算法：几何变换与投影算法            | ![MFC-7 3D Transform And Project ](./.doc/MFC-7_3DTrans.png) |
+| 项目名称                          |                                                 位置                                                 | 备注                          |                             结果                              |
+|:------------------------------|:--------------------------------------------------------------------------------------------------:|:----------------------------|:-----------------------------------------------------------:|
+| `MFC-1.vcxproj`               |                      [`/1_MFCBasic/MFC-1/MFC-1.vcxproj`](./1_MFCBasic/MFC-1/)                      | MFC绘图基础                     |             ![MFC-1 MFCBasic](./.doc/MFC-1.png)             |
+| `MFC-2_Bres.vcxproj`          |              [`/1_MFCBasic/MFC-2_Bres/MFC-2_Bres.vcxproj`](./1_MFCBasic/MFC-2_Bres/)               | 直线绘制算法：Bresenham算法          |          ![MFC-2 Bresenham](./.doc/MFC-2_Bres.png)          |
+| `MFC-2_DDA.vcxproj`           |                [`/1_MFCBasic/MFC-2_DDA/MFC-2_DDA.vcxproj`](./1_MFCBasic/MFC-2_DDA/)                | 直线绘制算法：DDA算法                |             ![MFC-2 DDA](./.doc/MFC-2_DDA.png)              |
+| `MFC-3_Bresenham.vcxproj`     |       [`/1_MFCBasic/MFC-3_Bresenham/MFC-3_Bresenham.vcxproj`](./1_MFCBasic/MFC-3_Bresenham/)       | 圆绘制算法：Bresenham扫描算法         |          ![MFC-3 Bresenham](./.doc/MFC-3_Bres.png)          |
+| `MFC-3_Wu.vcxproj`            |                 [`/1_MFCBasic/MFC-3_Wu/MFC-3_Wu.vcxproj`](./1_MFCBasic/MFC-3_Wu/)                  | 直线绘制算法：Wu反走样算法              |              ![MFC-3 Wu](./.doc/MFC-3_Wu.png)               |
+| `MFC-4_PolyFill.vcxproj`      |        [`/1_MFCBasic/MFC-4_PolyFill/MFC-4_PolyFill.vcxproj`](./1_MFCBasic/MFC-4_PolyFill/)         | 多边形填充算法：边标志边缘填充算法           |     ![MFC-4 Edge Flag Fill](./.doc/MFC-4_PolyFill.png)      |
+| `MFC-5_SeedFill.vcxproj`      |        [`/1_MFCBasic/MFC-5_SeedFill/MFC-5_SeedFill.vcxproj`](./1_MFCBasic/MFC-5_SeedFill/)         | 多边形填充算法：种子填充算法              |        ![MFC-5 Seed Fill](./.doc/MFC-5_SeedFill.png)        |
+| `MFC-6_CorhenSu.vcxproj`      |        [`/1_MFCBasic/MFC-6_CorhenSu/MFC-6_CorhenSu.vcxproj`](./1_MFCBasic/MFC-6_CorhenSu/)         | 剪裁算法：Cohen Sutherland直线剪裁算法 |     ![MFC-6 Cohen Sutherland](./.doc/MFC-6_CohenSu.png)     |
+| `MFC-7_3DTrans.vcxproj`       |          [`/1_MFCBasic/MFC-7_3DTrans/MFC-7_3DTrans.vcxproj`](./1_MFCBasic/MFC-7_3DTrans/)          | 三维变换算法：几何变换与投影算法            | ![MFC-7 3D Transform And Project](./.doc/MFC-7_3DTrans.png) |
+| `MFC-8_IllumineModel.vcxproj` | [`/1_MFCBasic/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj`](./1_MFCBasic/MFC-8_IllumineModel/) | 光照模型                        | ![MFC-8 Illumination Model](./.doc/MFC-8_IllumineModel.png) |
 
 ## 构建项目
 
@@ -73,17 +74,18 @@ Computer Graphics Practice Assignment Based on MFC
 
 This repository includes the following projects:
 
-| Project Name              |                                        Location                                        | Description                                |                            Output                           |
-| :------------------------ | :------------------------------------------------------------------------------------: | :----------------------------------------- | :---------------------------------------------------------: |
-| `MFC-1.vcxproj`           |                [`/1_MFCBasic/MFC-1/MFC-1.vcxproj`](./1_MFCBasic/MFC-1/)                | Basic MFC Drawing                          |             ![MFC-1 MFCBasic](./.doc/MFC-1.png)             |
-| `MFC-2_Bres.vcxproj`      |         [`/1_MFCBasic/MFC-2_Bres/MFC-2_Bres.vcxproj`](./1_MFCBasic/MFC-2_Bres/)        | Line Drawing Algorithm: Bresenham          |          ![MFC-2 Bresenham](./.doc/MFC-2_Bres.png)          |
-| `MFC-2_DDA.vcxproj`       |          [`/1_MFCBasic/MFC-2_DDA/MFC-2_DDA.vcxproj`](./1_MFCBasic/MFC-2_DDA/)          | Line Drawing Algorithm: DDA                |              ![MFC-2 DDA](./.doc/MFC-2_DDA.png)             |
-| `MFC-3_Bresenham.vcxproj` | [`/1_MFCBasic/MFC-3_Bresenham/MFC-3_Bresenham.vcxproj`](./1_MFCBasic/MFC-3_Bresenham/) | Circle Drawing Algorithm: Bresenham Scan   |          ![MFC-3 Bresenham](./.doc/MFC-3_Bres.png)          |
-| `MFC-3_Wu.vcxproj`        |            [`/1_MFCBasic/MFC-3_Wu/MFC-3_Wu.vcxproj`](./1_MFCBasic/MFC-3_Wu/)           | Line Drawing Algorithm: Wu Antialiasing    |               ![MFC-3 Wu](./.doc/MFC-3_Wu.png)              |
-| `MFC-4_PolyFill.vcxproj`  |   [`/1_MFCBasic/MFC-4_PolyFill/MFC-4_PolyFill.vcxproj`](./1_MFCBasic/MFC-4_PolyFill/)  | Polygon Fill Algorithm: Edge Flag Fill     |      ![MFC-4 Edge Flag Fill](./.doc/MFC-4_PolyFill.png)     |
-| `MFC-5_SeedFill.vcxproj`  |   [`/1_MFCBasic/MFC-5_SeedFill/MFC-5_SeedFill.vcxproj`](./1_MFCBasic/MFC-5_SeedFill/)  | Polygon Fill Algorithm: Seed Fill          |        ![MFC-5 Seed Fill](./.doc/MFC-5_SeedFill.png)        |
-| `MFC-6_CorhenSu.vcxproj`  |   [`/1_MFCBasic/MFC-6_CorhenSu/MFC-6_CorhenSu.vcxproj`](./1_MFCBasic/MFC-6_CorhenSu/)  | Clipping Algorithm: Cohen–Sutherland       |     ![MFC-6 Cohen Sutherland](./.doc/MFC-6_CohenSu.png)     |
-| `MFC-7_3DTrans.vcxproj`   |    [`/1_MFCBasic/MFC-7_3DTrans/MFC-7_3DTrans.vcxproj`](./1_MFCBasic/MFC-7_3DTrans/)    | 3D Transformation: Geometry and Projection | ![MFC-7 3D Transform And Project](./.doc/MFC-7_3DTrans.png) |
+| Project Name                  |                                              Location                                              | Description                                |                           Output                            |
+|:------------------------------|:--------------------------------------------------------------------------------------------------:|:-------------------------------------------|:-----------------------------------------------------------:|
+| `MFC-1.vcxproj`               |                      [`/1_MFCBasic/MFC-1/MFC-1.vcxproj`](./1_MFCBasic/MFC-1/)                      | Basic MFC Drawing                          |             ![MFC-1 MFCBasic](./.doc/MFC-1.png)             |
+| `MFC-2_Bres.vcxproj`          |              [`/1_MFCBasic/MFC-2_Bres/MFC-2_Bres.vcxproj`](./1_MFCBasic/MFC-2_Bres/)               | Line Drawing Algorithm: Bresenham          |          ![MFC-2 Bresenham](./.doc/MFC-2_Bres.png)          |
+| `MFC-2_DDA.vcxproj`           |                [`/1_MFCBasic/MFC-2_DDA/MFC-2_DDA.vcxproj`](./1_MFCBasic/MFC-2_DDA/)                | Line Drawing Algorithm: DDA                |             ![MFC-2 DDA](./.doc/MFC-2_DDA.png)              |
+| `MFC-3_Bresenham.vcxproj`     |       [`/1_MFCBasic/MFC-3_Bresenham/MFC-3_Bresenham.vcxproj`](./1_MFCBasic/MFC-3_Bresenham/)       | Circle Drawing Algorithm: Bresenham Scan   |          ![MFC-3 Bresenham](./.doc/MFC-3_Bres.png)          |
+| `MFC-3_Wu.vcxproj`            |                 [`/1_MFCBasic/MFC-3_Wu/MFC-3_Wu.vcxproj`](./1_MFCBasic/MFC-3_Wu/)                  | Line Drawing Algorithm: Wu Antialiasing    |              ![MFC-3 Wu](./.doc/MFC-3_Wu.png)               |
+| `MFC-4_PolyFill.vcxproj`      |        [`/1_MFCBasic/MFC-4_PolyFill/MFC-4_PolyFill.vcxproj`](./1_MFCBasic/MFC-4_PolyFill/)         | Polygon Fill Algorithm: Edge Flag Fill     |     ![MFC-4 Edge Flag Fill](./.doc/MFC-4_PolyFill.png)      |
+| `MFC-5_SeedFill.vcxproj`      |        [`/1_MFCBasic/MFC-5_SeedFill/MFC-5_SeedFill.vcxproj`](./1_MFCBasic/MFC-5_SeedFill/)         | Polygon Fill Algorithm: Seed Fill          |        ![MFC-5 Seed Fill](./.doc/MFC-5_SeedFill.png)        |
+| `MFC-6_CorhenSu.vcxproj`      |        [`/1_MFCBasic/MFC-6_CorhenSu/MFC-6_CorhenSu.vcxproj`](./1_MFCBasic/MFC-6_CorhenSu/)         | Clipping Algorithm: Cohen–Sutherland       |     ![MFC-6 Cohen Sutherland](./.doc/MFC-6_CohenSu.png)     |
+| `MFC-7_3DTrans.vcxproj`       |          [`/1_MFCBasic/MFC-7_3DTrans/MFC-7_3DTrans.vcxproj`](./1_MFCBasic/MFC-7_3DTrans/)          | 3D Transformation: Geometry and Projection | ![MFC-7 3D Transform And Project](./.doc/MFC-7_3DTrans.png) |
+| `MFC-8_IllumineModel.vcxproj` | [`/1_MFCBasic/MFC-8_IllumineModel/MFC-8_IllumineModel.vcxproj`](./1_MFCBasic/MFC-8_IllumineModel/) | Illumation Model Algorithm                 | ![MFC-8 Illumination Model](./.doc/MFC-8_IllumineModel.png) |
 
 ## Building the Projects
 
