@@ -1,4 +1,10 @@
-﻿# MFC_ComputerGraph
+﻿> [!IMPORTANT]
+>
+> 本人该课程已经结课，故对该存储库归档且不再接受任何Pull Request与Issues。
+>
+> Beacuse of the ending of this course in person, so this repo is achieved and not recept any PRs and Issues.
+
+# MFC_ComputerGraph
 
 > [!TIP]
 > 
