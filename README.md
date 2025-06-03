@@ -31,9 +31,9 @@
 
 由于MFC仅支持Windows，因此必须在Windows系统上调试、运行。
 
-本项目仅在Visual Studio 2022中测试。为兼容Visual Studio 2008，已将预编译头更改为`stdafx.h`，但因为解决方案使用Visual 
-Studio 2022新建，所以欲想在Visual Studio 2008中运行，需要自行新建解决方案和项目，并将代码文件拷贝到新建的项目中。考虑到
-Visual Studio 2008已停止支持，不对Visual Studio 2008作出任何支持或承诺。
+本项目仅在Visual Studio 2022中测试。为兼容Visual Studio 2010，已将预编译头更改为`stdafx.h`，但因为解决方案使用Visual 
+Studio 2022新建，所以欲想在Visual Studio 2010中运行，需要自行新建解决方案和项目，并将代码文件拷贝到新建的项目中。考虑到
+Visual Studio 2010已停止支持，不对Visual Studio 2010作出任何支持或承诺。
 
 ### 安装依赖
 
@@ -98,8 +98,8 @@ This repository includes the following projects:
 Since MFC is supported only on Windows, the projects must be run and debugged on a Windows system.
 
 These projects were tested using Visual Studio 2022 only. Although the precompiled header was changed to `stdafx.h` to 
-allow potential compatibility with Visual Studio 2008, the solution was created using Visual Studio 2022. To use it in 
-Visual Studio 2008, you’ll need to create new projects manually and copy the source files. Since Visual Studio 2008 is 
+allow potential compatibility with Visual Studio 2010, the solution was created using Visual Studio 2022. To use it in 
+Visual Studio 2010, you’ll need to create new projects manually and copy the source files. Since Visual Studio 2010 is 
 no longer supported, no effort will be made to ensure compatibility with it.
 
 ### Installing Dependencies
