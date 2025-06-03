@@ -21,7 +21,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-6_CohenSu", "MFC-6_Cohe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-7_3DTrans", "MFC-7_3DTrans\MFC-7_3DTrans.vcxproj", "{9BA801A6-AFC9-DE62-BD5F-1CFE1B3CF65E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "MFC-8_IllumineModel\Test.vcxproj", "{B2394E95-92A1-4D77-BF7D-01422604089D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-8_IllumineModel", "MFC-8_IllumineModel\MFC-8_IllumineModel.vcxproj", "{B2394E95-92A1-4D77-BF7D-01422604089D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
