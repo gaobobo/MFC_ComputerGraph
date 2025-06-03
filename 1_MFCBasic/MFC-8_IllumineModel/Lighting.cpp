@@ -70,9 +70,9 @@ CRGB CLighting::Lighting(CP3 ViewPoint,CP3 Point,CVector Normal,CMaterial *pMate
 			{
 				//第1步，加入漫反射光
 				
-				InitC.red+=Light[i].L_Diffuse.red*pMaterial->M_Diffuse.red*CosTheta;
-				InitC.green+=Light[i].L_Diffuse.green*pMaterial->M_Diffuse.green*CosTheta;
-				InitC.blue+=Light[i].L_Diffuse.blue*pMaterial->M_Diffuse.blue*CosTheta;
+				InitC.red += Light[i].L_Diffuse.red * pMaterial->M_Diffuse.red * CosTheta;
+				InitC.green += Light[i].L_Diffuse.green * pMaterial->M_Diffuse.green * CosTheta;
+				InitC.blue += Light[i].L_Diffuse.blue * pMaterial->M_Diffuse.blue * CosTheta;
 				
 				//第2步，加入镜面反射光
 				CVector VV(Point,ViewPoint);
@@ -82,9 +82,9 @@ CRGB CLighting::Lighting(CP3 ViewPoint,CP3 Point,CVector Normal,CMaterial *pMate
 				
 				double nHN=pow(MAX(Dot(VH,VN),0),pMaterial->M_n);
 				
-				InitC.red+=Light[i].L_Specular.red*pMaterial->M_Specular.red*nHN;
-				InitC.green+=Light[i].L_Specular.green*pMaterial->M_Specular.green*nHN;
-				InitC.blue+=Light[i].L_Specular.blue*pMaterial->M_Specular.blue*nHN;				
+				InitC.red += Light[i].L_Specular.red * pMaterial->M_Specular.red * nHN;
+				InitC.green += Light[i].L_Specular.green * pMaterial->M_Specular.green * nHN;
+				InitC.blue += Light[i].L_Specular.blue * pMaterial->M_Specular.blue * nHN;				
 			}
 			//第3步，光强衰减
 			double c0=Light[i].L_C0;
